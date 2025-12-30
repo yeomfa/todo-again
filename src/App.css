@@ -1,0 +1,7 @@
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  width: 40lvw;
+  height: 70lvh;
+  padding: 30px;
+}

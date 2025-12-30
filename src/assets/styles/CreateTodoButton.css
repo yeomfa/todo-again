@@ -1,0 +1,13 @@
+.todo-add-button {
+  background-color: red;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.todo-add-button:hover {
+  cursor: pointer;
+  outline: 2px solid lightgray;
+  background-color: #303030;
+}
