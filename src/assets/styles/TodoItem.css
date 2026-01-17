@@ -9,6 +9,10 @@
 
 .todo-icon {
   font-weight: bold;
+  appearance: none;
+  outline: none;
+  background: none;
+  border: none;
 }
 
 .todo-icon:hover {
