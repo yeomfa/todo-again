@@ -3,7 +3,7 @@ import {
   MinusCircleIcon,
   XCircleIcon,
 } from '@phosphor-icons/react';
-import '../assets/styles/TodoItem.css';
+import './TodoItem.css';
 
 export function TodoItem({
   text,
