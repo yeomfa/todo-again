@@ -4,6 +4,7 @@ import { TodoContext } from '.';
 
 export function TodoProvider({ children }) {
   const [searchValue, setSearchValue] = useState('');
+  const [isOpenModal, setIsOpenModal] = useState(false);
   let {
     item: todos,
     saveItem: saveTodos,
@@ -34,6 +35,12 @@ export function TodoProvider({ children }) {
     saveTodos(newTodos);
   };
 
+  const createTodo = (todo) => {
+    todos.push(todo);
+
+    saveTodos(todos);
+  };
+
   return (
     <TodoContext.Provider
       value={{
@@ -48,6 +55,9 @@ export function TodoProvider({ children }) {
         searchedTodos,
         completeTodo,
         deleteTodo,
+        isOpenModal,
+        setIsOpenModal,
+        createTodo,
       }}
     >
       {children}

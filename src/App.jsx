@@ -9,10 +9,19 @@ import {
 } from './components';
 import { useContext } from 'react';
 import { TodoContext } from './context/TodoContext';
+import { Modal } from './components/Modal';
+import { TodoForm } from './components/TodoForm';
 
 function App() {
-  const { isLoading, hasError, searchedTodos, completeTodo, deleteTodo } =
-    useContext(TodoContext);
+  const {
+    isLoading,
+    hasError,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    isOpenModal,
+    setIsOpenModal,
+  } = useContext(TodoContext);
 
   return (
     <div className="todo-app">
@@ -38,7 +47,16 @@ function App() {
           />
         ))}
       </TodoList>
-      <CreateTodoButton />
+
+      {!isOpenModal && (
+        <CreateTodoButton onCreate={() => setIsOpenModal(!isOpenModal)} />
+      )}
+
+      {isOpenModal && (
+        <Modal>
+          <TodoForm />
+        </Modal>
+      )}
     </div>
   );
 }

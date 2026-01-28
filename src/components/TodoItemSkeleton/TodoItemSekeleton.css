@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
   border: none;
+  border-radius: 10px;
 
   display: block;
   height: 16px;
